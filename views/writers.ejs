@@ -1,0 +1,31 @@
+<DOCTYPE html>
+<html>
+<head>
+	<% include includepages/head %>
+	<title>Writers</title>
+</head>
+<body>
+	<header>
+		<% include includepages/header.ejs %>
+	</header>
+
+	<article class="container">
+
+		<% for (var i in writers){ %>
+			<div class="row writer-info">
+			  <div class="col-md-4">
+			  	<strong><%=writers[i].f_name %> &nbsp; <%=writers[i].s_name %></strong>
+			  </div>
+			  <div class="col-md-6 col-md-pull-2">
+			  	<p><%=writers[i].about %></p>
+			  	<em><cite><%=writers[i].email %></cite></em>
+			  </div>
+			</div>
+		<% } %>
+	</article>
+
+	<footer>
+		<% include includepages/footer.ejs %>
+	</footer>
+</body>
+</html>

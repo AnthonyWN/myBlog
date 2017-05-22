@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include includepages/head.ejs %>
+    <title>Home</title>
+  </head>
+  <body>
+    <% include includepages/header.ejs  %>
+    <div class="navigator align">
+      <% include includepages/navigator.ejs %>
+
+      <div class="arts">
+      <div class=" nav navbar-default title">
+        <p class="center">Latest Blogs</p>
+      </div>
+        <ul class="nav nav-pills arts">
+        <% for(var item in data){ %>
+          <li id="link" role="presentation"><a href="javascript:void(0);" link="<%= data[item].id %>">
+          <%= data[item].blog_title %>
+          </a></li>
+        <% } %>
+        </ul>
+      </div>
+
+    </div>
+      <article class="align">
+        <div class="blog">
+
+        </div>
+      </article>
+
+      <aside class="align">
+      </aside>
+
+      <footer>
+        <% include includepages/footer.ejs %>
+      </footer>
+
+      <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+      <script type="text/javascript">
+
+          $('#link a').on('click', function(){
+            var temp = $(this).attr("link");
+
+            $.ajax({
+              type: 'POST',
+              data: { post_data: temp },
+              ContentType: 'application/json',
+              url: 'index.js',
+              error: function(a, b, c) {
+                //console.log(a+" | "+b+" | "+c);
+                console.log(a);
+              },
+              success: function(data){
+                $('.blog').html(data.text);
+              }
+            });
+
+          });
+
+      </script>
+  </body>
+</html>

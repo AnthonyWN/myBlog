@@ -1,0 +1,101 @@
+body{
+  background: url(/images/background.jpg);
+  margin-left: 2%;
+  margin-right: 2%;
+}
+header{
+  padding: 1%;
+  min-height: 150px;
+}
+.header-img{
+  float:left;
+}
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('myfont.woff2') format('woff2'),
+       url('myfont.woff') format('woff'),
+       url('myfont.ttf') format('truetype');
+}
+.slogan{
+  font-family: 'MyWebFont', Fallback, sans-serif;
+  font-size: 26px;
+  color: gray;
+  float: right;
+  letter-spacing: 2px;
+}
+.nav-defn{
+  background-color: skyblue;
+  border-radius: 5px;
+  margin-bottom: 2%;
+}
+.align{
+  float: left;
+}
+.title{
+  margin-top:1%;
+  margin-bottom: 1%;
+  background-color: skyblue;
+  padding:auto auto;
+  border-radius: 5px;
+  text-align: center;
+}
+.center{
+  padding-top:10px;
+}
+.navigator{
+    width: 13%;
+    margin-right: 1%; 
+}
+article{
+  background-color: white;
+  border-radius: 5px;
+  padding: 2% 3%;  
+  width:70%;
+  margin-right: 1%;
+  font: 'New Times Roman', Times, serif;
+}
+aside{
+  width: 15%;
+}
+footer{
+  clear: both;
+  margin-top: 2%;
+  background-color: skyblue;
+}
+.social-links{
+  padding-top:2%;
+  padding-bottom: 1%;
+  padding-left: 2%; 
+}
+.bottom-footer{
+  border-top: 2px solid black;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.footer-nav{
+  text-align:right;
+  list-style: none;
+}
+.footer-nav li{
+  display: inline;
+}
+.footer-nav li:not(:first-child):before{
+  content: '|';
+  padding: 0px 10px;
+}
+.footer-nav a{
+  color: black;
+}
+.footer-nav a:hover{
+  text-decoration: none;
+  color:gray;
+}
+.writer-info{
+  background: #DCDCDC;
+  margin: 1%;
+  padding: 1%;
+}
+.address{
+  clear: both;
+  line-height: 1%;
+}

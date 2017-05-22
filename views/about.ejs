@@ -1,0 +1,91 @@
+<DOCTYPE html>
+<html>
+<head>
+	<% include includepages/head.ejs %>
+	<title>About us</title>
+</head>
+<body>
+	<header>
+		<% include includepages/header.ejs %>
+	</header>
+
+	<article>
+		<h2>About us: </h2>
+
+		<div class="col-md-7 col-md-push-1">
+			<p>Curabitur diam diam, eleifend sit amet rhoncus vitae, tempus ac enim. Vivamus sed tellus vitae nisl mattis elementum. Nullam eget augue scelerisque, semper dui ut, feugiat neque. Pellentesque ut neque dui. Mauris lacus mauris, sollicitudin sit amet libero ut, ullamcorper aliquet est. Suspendisse auctor laoreet eros ut sodales. Praesent varius magna et rhoncus convallis. Mauris vitae malesuada mauris. Morbi commodo eget ante eu pharetra. Sed risus arcu, sollicitudin eu volutpat eget, placerat eu mauris. Suspendisse ullamcorper auctor nisi eu vulputate. Nulla bibendum mauris a ex vestibulum, vitae euismod arcu porttitor. Donec semper, dui in efficitur iaculis, ligula massa luctus sapien, eu sollicitudin tortor leo non massa.</p>
+		</div>
+
+		<div class="address">
+		<h4>Contact address:</h4>
+			<address>
+				<div class="col-md-4 col-md-push-1">
+					Telephone: 020-541-5265<br>
+					Telephone2: 120-562-8452<br>
+					Mobile: +254 729 888***<br>
+					Mobile2: +254 736 458***<br>
+					email: info@dailypost.org<br>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#mailer" data-whatever="info@dailypost.org">FeedBack</button>
+				</div>
+				
+			</address>
+		</div>
+
+		<div class="address">
+			<h4>Location address:</h4>
+			<address>
+				<div class="col-md-4 col-md-push-1">
+					#999, xyz Building<br>
+					RingRoad, Parklands<br>
+					Nairobi<br>
+				</div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31912.71468374467!2d37.0183577!3d-1.0952845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1489434430264" width="400" height="300" frameborder="1" style="border:1px solid black" allowfullscreen></iframe>
+			</address>
+		</div>
+	</article>
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="form-group">
+	            <label for="recipient-name" class="control-label">Recipient:</label>
+	            <input type="text" class="form-control" id="recipient-name">
+	          </div>
+	          <div class="form-group">
+	            <label for="message-text" class="control-label">Message:</label>
+	            <textarea class="form-control" id="message-text" placeholder="text"></textarea>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Send message</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<footer>
+		<% include includepages/footer.ejs %>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$('#exampleModal').on('show.bs.modal', function (event) {
+		  var button = $(event.relatedTarget) // Button that triggered the modal
+		  var recipient = button.data('whatever')
+
+		  var modal = $(this)
+		  modal.find('.modal-title').text('New message to ' + recipient)
+		  modal.find('.modal-body input').val(recipient)
+		});
+	</script>
+	
+</body>
+</html>

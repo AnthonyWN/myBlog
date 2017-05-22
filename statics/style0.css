@@ -1,0 +1,38 @@
+body{
+  background: url(/images/background.jpg);
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.nav-defn{
+  background-color: skyblue;
+  border-radius: 5px;
+  margin-bottom: 2%;
+}
+.heading{
+	float: left;
+}
+.nav-defn form{
+	float: right;
+}
+.signup{
+	float:right;
+	width:40%;
+	text-align: left;
+	margin-bottom: 30px;
+}
+.writer-sub{
+	background-color: white;
+	border-radius: 5px;
+	padding:2%;
+	width:30%;
+	float:left;
+}
+.reg-btn{
+	margin-top:3%;
+}
+.upload-header{
+	border-bottom: lightblue solid 4px;
+	margin-bottom: 1%;
+	padding: 2% 0px;
+	color: green;
+}

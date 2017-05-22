@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include includepages/head.ejs %>
+    <title>Signin</title>
+  </head>
+  <body>
+
+  <nav class="nav navbar-default nav-defn">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="heading">
+            <h4>Writer Signin</h4>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  <h3>Sign up</h3>
+<div class="signup">
+  <div class="demo">
+    
+  </div>
+  <% if(errors){ %>
+    <% for(var err in errors){ %>
+      <div class='alert alert-danger'><p><%= errors[err].msg %></p></div>
+    <% } %>
+  <% } %>
+  <form name="signup_form" method="POST" action="/admin/register">
+
+    <div class="form-group">
+      <label for="f_name">First name</label>
+      <input type="text" class="form-control" name="f_name" required/>
+    </div>
+    <div class="form-group">
+      <label for="s_name">Second name</label>
+      <input type="text" class="form-control" name="s_name" required/>
+    </div>
+    <div class="form-group">
+      <label for="about" >About</label>
+      <textarea type="text" class="form-control" name="about" id="about" placeholder="A little about yourself" rows="7" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" name="email" required />
+    </div>    
+    <div class="form-group">
+      <label for="pasword">Password</label>
+      <input type="password" class="form-control" name="pasword" required />
+    </div>
+    <div class="form-group">
+      <label for="pasword">Retype Password</label>
+      <input type="password" class="form-control" name="pasword1" required />
+    </div>
+    <!--div class="form-group">
+      <label for="exampleInputFile">File input</label>
+      <input type="file" id="exampleInputFile">
+      <p class="help-block">Example block-level help text here.</p>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> Check me out
+      </label>
+    </div-->
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  
+
+
+</div>
+
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript">
+  </script>
+
+</body>
+</html>
